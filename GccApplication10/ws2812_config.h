@@ -2,7 +2,7 @@
  * light_ws2812_config.h
  *
  * Created: 18.01.2014 09:58:15
- * Modified: Hussein Jabbari (http://forum.lightiran.com)
+ * Modified:elasa.ir from Hussein Jabbari (http://forum.lightiran.com)
  * User Configuration file for the light_ws2812_lib
  *
  */ 
