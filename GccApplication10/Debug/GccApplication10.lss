@@ -1,0 +1,666 @@
+
+GccApplication10.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000002f2  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .bss          00000009  00800100  00800100  00000366  2**0
+                  ALLOC
+  2 .stab         000006cc  00000000  00000000  00000368  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  3 .stabstr      00000097  00000000  00000000  00000a34  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_aranges 00000020  00000000  00000000  00000acb  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_pubnames 0000007c  00000000  00000000  00000aeb  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   000005af  00000000  00000000  00000b67  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 000001de  00000000  00000000  00001116  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000479  00000000  00000000  000012f4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000060  00000000  00000000  00001770  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000199  00000000  00000000  000017d0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    0000057c  00000000  00000000  00001969  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_pubtypes 00000041  00000000  00000000  00001ee5  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_ranges 000000c0  00000000  00000000  00001f26  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 46 00 	jmp	0x8c	; 0x8c <__ctors_end>
+   4:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+   8:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+   c:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  10:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  14:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  18:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  1c:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  20:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  24:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  28:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  2c:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  30:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  34:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  38:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  3c:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  40:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  44:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  48:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  4c:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  50:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  54:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  58:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  5c:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  60:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  64:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  68:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  6c:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  70:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  74:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  78:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  7c:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  80:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  84:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  88:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_clear_bss>:
+  98:	11 e0       	ldi	r17, 0x01	; 1
+  9a:	a0 e0       	ldi	r26, 0x00	; 0
+  9c:	b1 e0       	ldi	r27, 0x01	; 1
+  9e:	01 c0       	rjmp	.+2      	; 0xa2 <.do_clear_bss_start>
+
+000000a0 <.do_clear_bss_loop>:
+  a0:	1d 92       	st	X+, r1
+
+000000a2 <.do_clear_bss_start>:
+  a2:	a9 30       	cpi	r26, 0x09	; 9
+  a4:	b1 07       	cpc	r27, r17
+  a6:	e1 f7       	brne	.-8      	; 0xa0 <.do_clear_bss_loop>
+  a8:	0e 94 dc 00 	call	0x1b8	; 0x1b8 <main>
+  ac:	0c 94 77 01 	jmp	0x2ee	; 0x2ee <_exit>
+
+000000b0 <__bad_interrupt>:
+  b0:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000b4 <ws2812_setleds>:
+   ws2812_setleds_pin(ledarray,leds, _BV(ws2812_pin));
+}
+
+void inline ws2812_setleds_pin(struct cRGB *ledarray, uint16_t leds, uint8_t pinmask)
+{
+  ws2812_DDRREG |= _BV(ws2812_pin); // Enable DDR
+  b4:	bf 9a       	sbi	0x17, 7	; 23
+  ws2812_sendarray_mask((uint8_t*)ledarray,leds+leds+leds,pinmask);
+  b6:	9b 01       	movw	r18, r22
+  b8:	22 0f       	add	r18, r18
+  ba:	33 1f       	adc	r19, r19
+  bc:	62 0f       	add	r22, r18
+  be:	73 1f       	adc	r23, r19
+void inline ws2812_sendarray_mask(uint8_t *data,uint16_t datlen,uint8_t maskhi)
+{
+  uint8_t curbyte,ctr,masklo;
+  uint8_t sreg_prev;
+  
+  masklo	=~maskhi&ws2812_PORTREG;
+  c0:	28 b3       	in	r18, 0x18	; 24
+  c2:	2f 77       	andi	r18, 0x7F	; 127
+  maskhi |=        ws2812_PORTREG;
+  c4:	38 b3       	in	r19, 0x18	; 24
+  c6:	30 68       	ori	r19, 0x80	; 128
+  sreg_prev=SREG;
+  c8:	af b7       	in	r26, 0x3f	; 63
+  cli();  
+  ca:	f8 94       	cli
+
+  while (datlen--) {
+  cc:	61 15       	cp	r22, r1
+  ce:	71 05       	cpc	r23, r1
+  d0:	81 f0       	breq	.+32     	; 0xf2 <loop54+0x18>
+}
+
+void inline ws2812_setleds_pin(struct cRGB *ledarray, uint16_t leds, uint8_t pinmask)
+{
+  ws2812_DDRREG |= _BV(ws2812_pin); // Enable DDR
+  ws2812_sendarray_mask((uint8_t*)ledarray,leds+leds+leds,pinmask);
+  d2:	e8 2f       	mov	r30, r24
+  d4:	f9 2f       	mov	r31, r25
+  maskhi |=        ws2812_PORTREG;
+  sreg_prev=SREG;
+  cli();  
+
+  while (datlen--) {
+    curbyte=*data++;
+  d6:	81 91       	ld	r24, Z+
+    
+    asm volatile(
+  d8:	98 e0       	ldi	r25, 0x08	; 8
+
+000000da <loop54>:
+  da:	38 bb       	out	0x18, r19	; 24
+  dc:	87 ff       	sbrs	r24, 7
+  de:	28 bb       	out	0x18, r18	; 24
+  e0:	88 0f       	add	r24, r24
+  e2:	00 00       	nop
+  e4:	00 c0       	rjmp	.+0      	; 0xe6 <loop54+0xc>
+  e6:	28 bb       	out	0x18, r18	; 24
+  e8:	9a 95       	dec	r25
+  ea:	b9 f7       	brne	.-18     	; 0xda <loop54>
+  ec:	61 50       	subi	r22, 0x01	; 1
+  ee:	70 40       	sbci	r23, 0x00	; 0
+  masklo	=~maskhi&ws2812_PORTREG;
+  maskhi |=        ws2812_PORTREG;
+  sreg_prev=SREG;
+  cli();  
+
+  while (datlen--) {
+  f0:	91 f7       	brne	.-28     	; 0xd6 <ws2812_setleds+0x22>
+    :	"=&d" (ctr)
+    :	"r" (curbyte), "I" (_SFR_IO_ADDR(ws2812_PORTREG)), "r" (maskhi), "r" (masklo)
+    );
+  }
+  
+  SREG=sreg_prev;
+  f2:	af bf       	out	0x3f, r26	; 63
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+  f4:	85 e8       	ldi	r24, 0x85	; 133
+  f6:	8a 95       	dec	r24
+  f8:	f1 f7       	brne	.-4      	; 0xf6 <loop54+0x1c>
+  fa:	00 00       	nop
+#define ws2812_DDRREG   CONCAT_EXP(DDR,ws2812_port)
+
+void inline ws2812_setleds(struct cRGB *ledarray, uint16_t leds)
+{
+   ws2812_setleds_pin(ledarray,leds, _BV(ws2812_pin));
+}
+  fc:	08 95       	ret
+
+000000fe <ws2812_setleds_pin>:
+
+void inline ws2812_setleds_pin(struct cRGB *ledarray, uint16_t leds, uint8_t pinmask)
+{
+  ws2812_DDRREG |= _BV(ws2812_pin); // Enable DDR
+  fe:	bf 9a       	sbi	0x17, 7	; 23
+  ws2812_sendarray_mask((uint8_t*)ledarray,leds+leds+leds,pinmask);
+ 100:	9b 01       	movw	r18, r22
+ 102:	22 0f       	add	r18, r18
+ 104:	33 1f       	adc	r19, r19
+ 106:	62 0f       	add	r22, r18
+ 108:	73 1f       	adc	r23, r19
+void inline ws2812_sendarray_mask(uint8_t *data,uint16_t datlen,uint8_t maskhi)
+{
+  uint8_t curbyte,ctr,masklo;
+  uint8_t sreg_prev;
+  
+  masklo	=~maskhi&ws2812_PORTREG;
+ 10a:	28 b3       	in	r18, 0x18	; 24
+ 10c:	34 2f       	mov	r19, r20
+ 10e:	30 95       	com	r19
+ 110:	23 23       	and	r18, r19
+  maskhi |=        ws2812_PORTREG;
+ 112:	38 b3       	in	r19, 0x18	; 24
+ 114:	43 2b       	or	r20, r19
+  sreg_prev=SREG;
+ 116:	af b7       	in	r26, 0x3f	; 63
+  cli();  
+ 118:	f8 94       	cli
+
+  while (datlen--) {
+ 11a:	61 15       	cp	r22, r1
+ 11c:	71 05       	cpc	r23, r1
+ 11e:	81 f0       	breq	.+32     	; 0x140 <loop132+0x18>
+}
+
+void inline ws2812_setleds_pin(struct cRGB *ledarray, uint16_t leds, uint8_t pinmask)
+{
+  ws2812_DDRREG |= _BV(ws2812_pin); // Enable DDR
+  ws2812_sendarray_mask((uint8_t*)ledarray,leds+leds+leds,pinmask);
+ 120:	e8 2f       	mov	r30, r24
+ 122:	f9 2f       	mov	r31, r25
+  maskhi |=        ws2812_PORTREG;
+  sreg_prev=SREG;
+  cli();  
+
+  while (datlen--) {
+    curbyte=*data++;
+ 124:	81 91       	ld	r24, Z+
+    
+    asm volatile(
+ 126:	98 e0       	ldi	r25, 0x08	; 8
+
+00000128 <loop132>:
+ 128:	48 bb       	out	0x18, r20	; 24
+ 12a:	87 ff       	sbrs	r24, 7
+ 12c:	28 bb       	out	0x18, r18	; 24
+ 12e:	88 0f       	add	r24, r24
+ 130:	00 00       	nop
+ 132:	00 c0       	rjmp	.+0      	; 0x134 <loop132+0xc>
+ 134:	28 bb       	out	0x18, r18	; 24
+ 136:	9a 95       	dec	r25
+ 138:	b9 f7       	brne	.-18     	; 0x128 <loop132>
+ 13a:	61 50       	subi	r22, 0x01	; 1
+ 13c:	70 40       	sbci	r23, 0x00	; 0
+  masklo	=~maskhi&ws2812_PORTREG;
+  maskhi |=        ws2812_PORTREG;
+  sreg_prev=SREG;
+  cli();  
+
+  while (datlen--) {
+ 13e:	91 f7       	brne	.-28     	; 0x124 <ws2812_setleds_pin+0x26>
+    :	"=&d" (ctr)
+    :	"r" (curbyte), "I" (_SFR_IO_ADDR(ws2812_PORTREG)), "r" (maskhi), "r" (masklo)
+    );
+  }
+  
+  SREG=sreg_prev;
+ 140:	af bf       	out	0x3f, r26	; 63
+ 142:	85 e8       	ldi	r24, 0x85	; 133
+ 144:	8a 95       	dec	r24
+ 146:	f1 f7       	brne	.-4      	; 0x144 <loop132+0x1c>
+ 148:	00 00       	nop
+void inline ws2812_setleds_pin(struct cRGB *ledarray, uint16_t leds, uint8_t pinmask)
+{
+  ws2812_DDRREG |= _BV(ws2812_pin); // Enable DDR
+  ws2812_sendarray_mask((uint8_t*)ledarray,leds+leds+leds,pinmask);
+  _delay_us(50);
+}
+ 14a:	08 95       	ret
+
+0000014c <ws2812_sendarray>:
+
+void ws2812_sendarray(uint8_t *data,uint16_t datlen)
+{
+ 14c:	fc 01       	movw	r30, r24
+void inline ws2812_sendarray_mask(uint8_t *data,uint16_t datlen,uint8_t maskhi)
+{
+  uint8_t curbyte,ctr,masklo;
+  uint8_t sreg_prev;
+  
+  masklo	=~maskhi&ws2812_PORTREG;
+ 14e:	28 b3       	in	r18, 0x18	; 24
+ 150:	2f 77       	andi	r18, 0x7F	; 127
+  maskhi |=        ws2812_PORTREG;
+ 152:	98 b3       	in	r25, 0x18	; 24
+ 154:	90 68       	ori	r25, 0x80	; 128
+  sreg_prev=SREG;
+ 156:	4f b7       	in	r20, 0x3f	; 63
+  cli();  
+ 158:	f8 94       	cli
+
+  while (datlen--) {
+ 15a:	61 15       	cp	r22, r1
+ 15c:	71 05       	cpc	r23, r1
+ 15e:	71 f0       	breq	.+28     	; 0x17c <loop192+0x18>
+    curbyte=*data++;
+ 160:	81 91       	ld	r24, Z+
+    
+    asm volatile(
+ 162:	38 e0       	ldi	r19, 0x08	; 8
+
+00000164 <loop192>:
+ 164:	98 bb       	out	0x18, r25	; 24
+ 166:	87 ff       	sbrs	r24, 7
+ 168:	28 bb       	out	0x18, r18	; 24
+ 16a:	88 0f       	add	r24, r24
+ 16c:	00 00       	nop
+ 16e:	00 c0       	rjmp	.+0      	; 0x170 <loop192+0xc>
+ 170:	28 bb       	out	0x18, r18	; 24
+ 172:	3a 95       	dec	r19
+ 174:	b9 f7       	brne	.-18     	; 0x164 <loop192>
+ 176:	61 50       	subi	r22, 0x01	; 1
+ 178:	70 40       	sbci	r23, 0x00	; 0
+  masklo	=~maskhi&ws2812_PORTREG;
+  maskhi |=        ws2812_PORTREG;
+  sreg_prev=SREG;
+  cli();  
+
+  while (datlen--) {
+ 17a:	91 f7       	brne	.-28     	; 0x160 <ws2812_sendarray+0x14>
+    :	"=&d" (ctr)
+    :	"r" (curbyte), "I" (_SFR_IO_ADDR(ws2812_PORTREG)), "r" (maskhi), "r" (masklo)
+    );
+  }
+  
+  SREG=sreg_prev;
+ 17c:	4f bf       	out	0x3f, r20	; 63
+}
+
+void ws2812_sendarray(uint8_t *data,uint16_t datlen)
+{
+  ws2812_sendarray_mask(data,datlen,_BV(ws2812_pin));
+}
+ 17e:	08 95       	ret
+
+00000180 <ws2812_sendarray_mask>:
+#define w_nop4  w_nop2 w_nop2
+#define w_nop8  w_nop4 w_nop4
+#define w_nop16 w_nop8 w_nop8
+
+void inline ws2812_sendarray_mask(uint8_t *data,uint16_t datlen,uint8_t maskhi)
+{
+ 180:	fc 01       	movw	r30, r24
+  uint8_t curbyte,ctr,masklo;
+  uint8_t sreg_prev;
+  
+  masklo	=~maskhi&ws2812_PORTREG;
+ 182:	88 b3       	in	r24, 0x18	; 24
+ 184:	94 2f       	mov	r25, r20
+ 186:	90 95       	com	r25
+ 188:	98 23       	and	r25, r24
+  maskhi |=        ws2812_PORTREG;
+ 18a:	88 b3       	in	r24, 0x18	; 24
+ 18c:	48 2b       	or	r20, r24
+  sreg_prev=SREG;
+ 18e:	3f b7       	in	r19, 0x3f	; 63
+  cli();  
+ 190:	f8 94       	cli
+
+  while (datlen--) {
+ 192:	61 15       	cp	r22, r1
+ 194:	71 05       	cpc	r23, r1
+ 196:	71 f0       	breq	.+28     	; 0x1b4 <loop241+0x18>
+    curbyte=*data++;
+ 198:	81 91       	ld	r24, Z+
+    
+    asm volatile(
+ 19a:	28 e0       	ldi	r18, 0x08	; 8
+
+0000019c <loop241>:
+ 19c:	48 bb       	out	0x18, r20	; 24
+ 19e:	87 ff       	sbrs	r24, 7
+ 1a0:	98 bb       	out	0x18, r25	; 24
+ 1a2:	88 0f       	add	r24, r24
+ 1a4:	00 00       	nop
+ 1a6:	00 c0       	rjmp	.+0      	; 0x1a8 <loop241+0xc>
+ 1a8:	98 bb       	out	0x18, r25	; 24
+ 1aa:	2a 95       	dec	r18
+ 1ac:	b9 f7       	brne	.-18     	; 0x19c <loop241>
+ 1ae:	61 50       	subi	r22, 0x01	; 1
+ 1b0:	70 40       	sbci	r23, 0x00	; 0
+  masklo	=~maskhi&ws2812_PORTREG;
+  maskhi |=        ws2812_PORTREG;
+  sreg_prev=SREG;
+  cli();  
+
+  while (datlen--) {
+ 1b2:	91 f7       	brne	.-28     	; 0x198 <ws2812_sendarray_mask+0x18>
+    :	"=&d" (ctr)
+    :	"r" (curbyte), "I" (_SFR_IO_ADDR(ws2812_PORTREG)), "r" (maskhi), "r" (masklo)
+    );
+  }
+  
+  SREG=sreg_prev;
+ 1b4:	3f bf       	out	0x3f, r19	; 63
+}
+ 1b6:	08 95       	ret
+
+000001b8 <main>:
+
+//struct cRGB led[2];
+struct cRGB led[3];
+
+int main(void)
+{
+ 1b8:	2f 92       	push	r2
+ 1ba:	3f 92       	push	r3
+ 1bc:	4f 92       	push	r4
+ 1be:	5f 92       	push	r5
+ 1c0:	6f 92       	push	r6
+ 1c2:	7f 92       	push	r7
+ 1c4:	8f 92       	push	r8
+ 1c6:	9f 92       	push	r9
+ 1c8:	af 92       	push	r10
+ 1ca:	bf 92       	push	r11
+ 1cc:	cf 92       	push	r12
+ 1ce:	df 92       	push	r13
+ 1d0:	ef 92       	push	r14
+ 1d2:	ff 92       	push	r15
+ 1d4:	0f 93       	push	r16
+ 1d6:	1f 93       	push	r17
+ 1d8:	df 93       	push	r29
+ 1da:	cf 93       	push	r28
+ 1dc:	00 d0       	rcall	.+0      	; 0x1de <main+0x26>
+ 1de:	0f 92       	push	r0
+ 1e0:	cd b7       	in	r28, 0x3d	; 61
+ 1e2:	de b7       	in	r29, 0x3e	; 62
+	
+	while(1)
+	{
+		for(int i=0,j=255;i<255;i++,j--)
+ 1e4:	4f ef       	ldi	r20, 0xFF	; 255
+ 1e6:	50 e0       	ldi	r21, 0x00	; 0
+ 1e8:	20 e0       	ldi	r18, 0x00	; 0
+ 1ea:	30 e0       	ldi	r19, 0x00	; 0
+		{
+			led[0].r = i;
+			led[0].g = 0;
+			led[0].b = j;
+ 1ec:	60 e0       	ldi	r22, 0x00	; 0
+ 1ee:	71 e0       	ldi	r23, 0x01	; 1
+ 1f0:	6e 5f       	subi	r22, 0xFE	; 254
+ 1f2:	7f 4f       	sbci	r23, 0xFF	; 255
+			led[1].r = j;
+ 1f4:	00 e0       	ldi	r16, 0x00	; 0
+ 1f6:	11 e0       	ldi	r17, 0x01	; 1
+ 1f8:	0c 5f       	subi	r16, 0xFC	; 252
+ 1fa:	1f 4f       	sbci	r17, 0xFF	; 255
+			led[1].g = 0;
+ 1fc:	0f 2e       	mov	r0, r31
+ 1fe:	f3 e0       	ldi	r31, 0x03	; 3
+ 200:	ef 2e       	mov	r14, r31
+ 202:	ff 24       	eor	r15, r15
+ 204:	f0 2d       	mov	r31, r0
+ 206:	80 e0       	ldi	r24, 0x00	; 0
+ 208:	91 e0       	ldi	r25, 0x01	; 1
+ 20a:	e8 0e       	add	r14, r24
+ 20c:	f9 1e       	adc	r15, r25
+			led[1].b = i;
+ 20e:	0f 2e       	mov	r0, r31
+ 210:	f5 e0       	ldi	r31, 0x05	; 5
+ 212:	cf 2e       	mov	r12, r31
+ 214:	dd 24       	eor	r13, r13
+ 216:	f0 2d       	mov	r31, r0
+ 218:	c8 0e       	add	r12, r24
+ 21a:	d9 1e       	adc	r13, r25
+			led[2].r = 0;
+ 21c:	0f 2e       	mov	r0, r31
+ 21e:	f7 e0       	ldi	r31, 0x07	; 7
+ 220:	af 2e       	mov	r10, r31
+ 222:	bb 24       	eor	r11, r11
+ 224:	f0 2d       	mov	r31, r0
+ 226:	a8 0e       	add	r10, r24
+ 228:	b9 1e       	adc	r11, r25
+			led[2].g = 0;
+ 22a:	0f 2e       	mov	r0, r31
+ 22c:	f6 e0       	ldi	r31, 0x06	; 6
+ 22e:	4f 2e       	mov	r4, r31
+ 230:	55 24       	eor	r5, r5
+ 232:	f0 2d       	mov	r31, r0
+ 234:	48 0e       	add	r4, r24
+ 236:	59 1e       	adc	r5, r25
+			led[2].b = 255;
+ 238:	22 24       	eor	r2, r2
+ 23a:	33 24       	eor	r3, r3
+ 23c:	68 94       	set
+ 23e:	23 f8       	bld	r2, 3
+ 240:	28 0e       	add	r2, r24
+ 242:	39 1e       	adc	r3, r25
+}
+
+void inline ws2812_setleds_pin(struct cRGB *ledarray, uint16_t leds, uint8_t pinmask)
+{
+  ws2812_DDRREG |= _BV(ws2812_pin); // Enable DDR
+  ws2812_sendarray_mask((uint8_t*)ledarray,leds+leds+leds,pinmask);
+ 244:	8b 83       	std	Y+3, r24	; 0x03
+ 246:	89 2e       	mov	r8, r25
+#include "light_ws2812.h"
+
+//struct cRGB led[2];
+struct cRGB led[3];
+
+int main(void)
+ 248:	81 e0       	ldi	r24, 0x01	; 1
+ 24a:	91 e0       	ldi	r25, 0x01	; 1
+ 24c:	08 96       	adiw	r24, 0x08	; 8
+ 24e:	3a 01       	movw	r6, r20
+ 250:	03 c0       	rjmp	.+6      	; 0x258 <main+0xa0>
+{
+	
+	while(1)
+	{
+		for(int i=0,j=255;i<255;i++,j--)
+ 252:	08 94       	sec
+ 254:	61 08       	sbc	r6, r1
+ 256:	71 08       	sbc	r7, r1
+		{
+			led[0].r = i;
+ 258:	a1 e0       	ldi	r26, 0x01	; 1
+ 25a:	b1 e0       	ldi	r27, 0x01	; 1
+ 25c:	2c 93       	st	X, r18
+			led[0].g = 0;
+ 25e:	e0 e0       	ldi	r30, 0x00	; 0
+ 260:	f1 e0       	ldi	r31, 0x01	; 1
+ 262:	10 82       	st	Z, r1
+			led[0].b = j;
+ 264:	db 01       	movw	r26, r22
+ 266:	6c 92       	st	X, r6
+			led[1].r = j;
+ 268:	f8 01       	movw	r30, r16
+ 26a:	60 82       	st	Z, r6
+			led[1].g = 0;
+ 26c:	d7 01       	movw	r26, r14
+ 26e:	1c 92       	st	X, r1
+			led[1].b = i;
+ 270:	f6 01       	movw	r30, r12
+ 272:	20 83       	st	Z, r18
+			led[2].r = 0;
+ 274:	d5 01       	movw	r26, r10
+ 276:	1c 92       	st	X, r1
+			led[2].g = 0;
+ 278:	f2 01       	movw	r30, r4
+ 27a:	10 82       	st	Z, r1
+			led[2].b = 255;
+ 27c:	ef ef       	ldi	r30, 0xFF	; 255
+ 27e:	d1 01       	movw	r26, r2
+ 280:	ec 93       	st	X, r30
+   ws2812_setleds_pin(ledarray,leds, _BV(ws2812_pin));
+}
+
+void inline ws2812_setleds_pin(struct cRGB *ledarray, uint16_t leds, uint8_t pinmask)
+{
+  ws2812_DDRREG |= _BV(ws2812_pin); // Enable DDR
+ 282:	bf 9a       	sbi	0x17, 7	; 23
+  ws2812_sendarray_mask((uint8_t*)ledarray,leds+leds+leds,pinmask);
+ 284:	eb 81       	ldd	r30, Y+3	; 0x03
+ 286:	f8 2d       	mov	r31, r8
+void inline ws2812_sendarray_mask(uint8_t *data,uint16_t datlen,uint8_t maskhi)
+{
+  uint8_t curbyte,ctr,masklo;
+  uint8_t sreg_prev;
+  
+  masklo	=~maskhi&ws2812_PORTREG;
+ 288:	48 b3       	in	r20, 0x18	; 24
+ 28a:	0f 2e       	mov	r0, r31
+ 28c:	ff e7       	ldi	r31, 0x7F	; 127
+ 28e:	9f 2e       	mov	r9, r31
+ 290:	f0 2d       	mov	r31, r0
+ 292:	94 22       	and	r9, r20
+  maskhi |=        ws2812_PORTREG;
+ 294:	58 b3       	in	r21, 0x18	; 24
+ 296:	50 68       	ori	r21, 0x80	; 128
+  sreg_prev=SREG;
+ 298:	4f b7       	in	r20, 0x3f	; 63
+  cli();  
+ 29a:	f8 94       	cli
+ 29c:	3a 83       	std	Y+2, r19	; 0x02
+ 29e:	29 83       	std	Y+1, r18	; 0x01
+
+  while (datlen--) {
+    curbyte=*data++;
+ 2a0:	21 91       	ld	r18, Z+
+    
+    asm volatile(
+ 2a2:	38 e0       	ldi	r19, 0x08	; 8
+
+000002a4 <loop417>:
+ 2a4:	58 bb       	out	0x18, r21	; 24
+ 2a6:	27 ff       	sbrs	r18, 7
+ 2a8:	98 ba       	out	0x18, r9	; 24
+ 2aa:	22 0f       	add	r18, r18
+ 2ac:	00 00       	nop
+ 2ae:	00 c0       	rjmp	.+0      	; 0x2b0 <loop417+0xc>
+ 2b0:	98 ba       	out	0x18, r9	; 24
+ 2b2:	3a 95       	dec	r19
+ 2b4:	b9 f7       	brne	.-18     	; 0x2a4 <loop417>
+  masklo	=~maskhi&ws2812_PORTREG;
+  maskhi |=        ws2812_PORTREG;
+  sreg_prev=SREG;
+  cli();  
+
+  while (datlen--) {
+ 2b6:	e8 17       	cp	r30, r24
+ 2b8:	f9 07       	cpc	r31, r25
+ 2ba:	91 f7       	brne	.-28     	; 0x2a0 <main+0xe8>
+ 2bc:	29 81       	ldd	r18, Y+1	; 0x01
+ 2be:	3a 81       	ldd	r19, Y+2	; 0x02
+    :	"=&d" (ctr)
+    :	"r" (curbyte), "I" (_SFR_IO_ADDR(ws2812_PORTREG)), "r" (maskhi), "r" (masklo)
+    );
+  }
+  
+  SREG=sreg_prev;
+ 2c0:	4f bf       	out	0x3f, r20	; 63
+ 2c2:	f5 e8       	ldi	r31, 0x85	; 133
+ 2c4:	fa 95       	dec	r31
+ 2c6:	f1 f7       	brne	.-4      	; 0x2c4 <loop417+0x20>
+ 2c8:	00 00       	nop
+ 2ca:	45 e8       	ldi	r20, 0x85	; 133
+ 2cc:	4a 95       	dec	r20
+ 2ce:	f1 f7       	brne	.-4      	; 0x2cc <loop417+0x28>
+ 2d0:	00 00       	nop
+int main(void)
+{
+	
+	while(1)
+	{
+		for(int i=0,j=255;i<255;i++,j--)
+ 2d2:	2f 5f       	subi	r18, 0xFF	; 255
+ 2d4:	3f 4f       	sbci	r19, 0xFF	; 255
+ 2d6:	2f 3f       	cpi	r18, 0xFF	; 255
+ 2d8:	31 05       	cpc	r19, r1
+ 2da:	0c f4       	brge	.+2      	; 0x2de <loop417+0x3a>
+ 2dc:	ba cf       	rjmp	.-140    	; 0x252 <main+0x9a>
+ 2de:	0f 2e       	mov	r0, r31
+ 2e0:	ff ef       	ldi	r31, 0xFF	; 255
+ 2e2:	6f 2e       	mov	r6, r31
+ 2e4:	77 24       	eor	r7, r7
+ 2e6:	f0 2d       	mov	r31, r0
+ 2e8:	20 e0       	ldi	r18, 0x00	; 0
+ 2ea:	30 e0       	ldi	r19, 0x00	; 0
+ 2ec:	b5 cf       	rjmp	.-150    	; 0x258 <main+0xa0>
+
+000002ee <_exit>:
+ 2ee:	f8 94       	cli
+
+000002f0 <__stop_program>:
+ 2f0:	ff cf       	rjmp	.-2      	; 0x2f0 <__stop_program>
